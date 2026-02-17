@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8080/api";
+const API_BASE = "https://fusion2048.onrender.com";
 const GAME_API = `${API_BASE}/game`;
 
 let gameState = null;
@@ -306,3 +306,4 @@ function logout() {
   localStorage.removeItem("token");
   location.reload();
 }
+
