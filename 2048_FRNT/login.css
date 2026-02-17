@@ -144,7 +144,6 @@
   }
 }
 
-/* ===== MOBILE TEXT FIX ONLY ===== */
 @media (max-width: 480px) {
 
   .login-switch {
@@ -155,3 +154,4 @@
   }
 
 }
+
