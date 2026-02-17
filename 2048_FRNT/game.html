@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fusion2048</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+
+  <!-- Orbitron Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="top-bar">
+
+    <!-- ROW 1 -->
+    <div class="top-row">
+      <h1 class="logo">Fusion 2048</h1>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="user-row">
+      <div class="user-area">
+        <span id="userDisplay"></span>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- GAME SECTION -->
+  <div class="game-section">
+
+    <!-- SCORE + BUTTON -->
+    <div class="game-header">
+      <div class="scores">
+
+        <div class="score-box">
+          <span class="label">SCORE</span>
+          <div id="score">0</div>
+        </div>
+
+        <div class="score-box">
+          <span class="label">BEST</span>
+          <div id="best">0</div>
+        </div>
+
+      </div>
+
+      <button class="new-game" onclick="restartGame()">
+        New Game
+      </button>
+
+    </div>
+
+    <!-- BOARD -->
+    <div class="board-container">
+
+      <!-- Game Grid -->
+      <div class="board" id="board"></div>
+
+      <!-- 🔥 GAME OVER / WIN OVERLAY -->
+      <div class="game-overlay" id="gameOverlay">
+
+        <!-- Confetti Canvas -->
+        <canvas id="confettiCanvas"></canvas>
+
+        <div class="overlay-content">
+
+          <!-- Typing Text -->
+          <h2 id="overlayText"></h2>
+
+          <!-- Buttons -->
+          <div class="overlay-buttons">
+            <button onclick="restartGame()">🔁 Try Again</button>
+            <button onclick="hideOverlay()">✖ Close</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 🔊 SOUND EFFECTS -->
+      <audio id="moveSound" src="sounds/move.mp3" preload="auto"></audio>
+      <audio id="winSound" src="sounds/win.mp3" preload="auto"></audio>
+      <audio id="loseSound" src="sounds/lose.mp3" preload="auto"></audio>
+
+
+    </div>
+
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="loginModal" class="login-modal">
+    <div class="login-ring">
+      <div class="login-card">
+        <h2 id="loginTitle">Sign In</h2>
+
+        <div class="input-group">
+          <input id="usernameInput" type="text" placeholder="Username" />
+        </div>
+
+        <div class="input-group">
+          <input id="passwordInput" type="password" placeholder="Password" />
+        </div>
+
+        <button id="authButton" onclick="handleAuth()">Login</button>
+
+        <p id="loginError"></p>
+        
+        <span class="login-switch" onclick="toggleMode()">
+          Don't have an account? Sign Up
+        </span>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
