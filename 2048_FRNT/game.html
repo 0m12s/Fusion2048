@@ -10,8 +10,6 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="login.css">
-
-  <!-- Orbitron Font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
@@ -19,12 +17,10 @@
 
   <header class="top-bar">
 
-    <!-- ROW 1 -->
     <div class="top-row">
       <h1 class="logo">Fusion 2048</h1>
     </div>
 
-    <!-- ROW 2 -->
     <div class="user-row">
       <div class="user-area">
         <span id="userDisplay"></span>
@@ -36,7 +32,6 @@
 
   <!-- GAME SECTION -->
   <div class="game-section">
-
     <!-- SCORE + BUTTON -->
     <div class="game-header">
       <div class="scores">
@@ -65,7 +60,7 @@
       <!-- Game Grid -->
       <div class="board" id="board"></div>
 
-      <!-- 🔥 GAME OVER / WIN OVERLAY -->
+      <!-- GAME OVER / WIN OVERLAY -->
       <div class="game-overlay" id="gameOverlay">
 
         <!-- Confetti Canvas -->
@@ -85,7 +80,7 @@
         </div>
       </div>
 
-      <!-- 🔊 SOUND EFFECTS -->
+      <!-- SOUND EFFECTS -->
       <audio id="moveSound" src="sounds/move.mp3" preload="auto"></audio>
       <audio id="winSound" src="sounds/win.mp3" preload="auto"></audio>
       <audio id="loseSound" src="sounds/lose.mp3" preload="auto"></audio>
@@ -95,7 +90,7 @@
 
   </div>
 
-  <!-- LOGIN MODAL -->
+  <!-- LOGIN -->
   <div id="loginModal" class="login-modal">
     <div class="login-ring">
       <div class="login-card">
@@ -120,10 +115,8 @@
       </div>
     </div>
   </div>
-
-  <!-- Script -->
+  
   <script src="script.js"></script>
 
 </body>
-
 </html>
