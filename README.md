@@ -34,10 +34,6 @@ PostgreSQL (Render)
 HTML
 CSS
 JavaScript
-![Java](https://img.shields.io/badge/Java-17-orange)
-![Spring Boot](https://img.shields.io/badge/SpringBoot-3.x-brightgreen)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
-![License](https://img.shields.io/badge/License-MIT-yellow)
 
 # Backend
 Java
