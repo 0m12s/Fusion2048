@@ -288,6 +288,49 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+/* ================= TOUCH SUPPORT ================= */
+
+let touchStartX = 0;
+let touchStartY = 0;
+
+document.addEventListener("touchstart", (e) => {
+  const touch = e.changedTouches[0];
+  touchStartX = touch.screenX;
+  touchStartY = touch.screenY;
+});
+
+document.addEventListener("touchend", (e) => {
+  if (!gameState || gameState.gameOver || overlayVisible) return;
+
+  const touch = e.changedTouches[0];
+  const diffX = touch.screenX - touchStartX;
+  const diffY = touch.screenY - touchStartY;
+
+  const threshold = 30;
+
+  if (Math.abs(diffX) > Math.abs(diffY)) {
+    if (diffX > threshold) {
+      makeMove("RIGHT");
+    } else if (diffX < -threshold) {
+      makeMove("LEFT");
+    }
+  } else {
+    if (diffY > threshold) {
+      makeMove("DOWN");
+    } else if (diffY < -threshold) {
+      makeMove("UP");
+    }
+  }
+});
+
+document.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+  },
+  { passive: false },
+);
+
 /* ================= INIT ================= */
 
 window.onload = async function () {
@@ -306,9 +349,3 @@ function logout() {
   localStorage.removeItem("token");
   location.reload();
 }
-
-
-
-
-
-
