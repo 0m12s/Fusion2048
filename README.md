@@ -1,11 +1,10 @@
 # 🎮 Fusion2048 – Full Stack Web Application
 
-Fusion2048 is a production-ready full-stack web application built using Spring Boot and PostgreSQL with manual JWT-based authentication and a vanilla JavaScript frontend.
-
-The system implements secure stateless authentication, persistent score storage, and layered backend architecture.
+*Fusion2048 is a production-ready full-stack web application built using Spring Boot and PostgreSQL with manual JWT-based authentication and a vanilla JavaScript frontend.*
+*The system implements secure stateless authentication, persistent score storage, and layered backend architecture.*
 
 # 🌐 Live Application
-https://fusion2048.vercel.app/
+*https://fusion2048.vercel.app/*
 
 # 🏗 System Architecture
 
@@ -22,12 +21,12 @@ PostgreSQL (Render)
 
 # 🔐 Authentication Flow (Manual JWT Implementation)
 
-1. User submits login credentials
-2. Password validated using BCrypt
-3. JWT token generated using secret key
-4. Custom JWT filter intercepts every request
-5. Token validated before accessing protected endpoints
-6. Stateless authentication
+*1. User submits login credentials* <br>
+*2. Password validated using BCrypt* <br>
+*3. JWT token generated using secret key* <br>
+*4. Custom JWT filter intercepts every request* <br>
+*5. Token validated before accessing protected endpoints* <br>
+*6. Stateless authentication*
 
 # 🚀 Tech Stack
 # Frontend
