@@ -1,5 +1,5 @@
 const API_BASE = "https://fusion2048.onrender.com";
-const GAME_API = `${API_BASE}/game`;
+const GAME_API = `${API_BASE}/api/game`;
 
 let gameState = null;
 let overlayVisible = false;
@@ -52,7 +52,7 @@ async function handleAuth() {
   const endpoint = isLoginMode ? "login" : "register";
 
   try {
-    const res = await fetch(`${API_BASE}/auth/${endpoint}`, {
+    const res = await fetch(`${API_BASE}/api/auth/${endpoint}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -306,6 +306,7 @@ function logout() {
   localStorage.removeItem("token");
   location.reload();
 }
+
 
 
 
