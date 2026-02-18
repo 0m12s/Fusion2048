@@ -306,7 +306,7 @@ document.addEventListener("touchend", (e) => {
   const diffX = touch.screenX - touchStartX;
   const diffY = touch.screenY - touchStartY;
 
-  const threshold = 30;
+  const threshold = 20;
 
   if (Math.abs(diffX) > Math.abs(diffY)) {
     if (diffX > threshold) {
@@ -349,3 +349,4 @@ function logout() {
   localStorage.removeItem("token");
   location.reload();
 }
+
