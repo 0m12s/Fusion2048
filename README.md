@@ -74,12 +74,12 @@ score
 timestamp
 
 # ⚙️ Run Locally
-**Backend**
-mvn clean install
-mvn spring-boot:run
+**Backend**<br>
+`mvn clean install`<br>
+`mvn spring-boot:run`
 
-**frontend**
-Open index.html
+**frontend**<br>
+`Open index.html`
 
 # 📸 Application Screenshots
 <img width="1919" height="876" alt="Screenshot 2026-02-18 202958" src="https://github.com/user-attachments/assets/1ac727a8-9bce-4aed-9d99-bef528a57cc3" />
