@@ -53,12 +53,12 @@ JPA / Hibernate*
 *Environment variables for secrets*
 
 # 📡 Core Features 
-**User Registration**
-Encrypted Password Storage (BCrypt)
-Manual JWT Authentication
-Stateless Session Management
-Persistent Score Tracking
-RESTful API Architecture
+**User Registration**<br>
+Encrypted Password Storage (BCrypt)<br>
+Manual JWT Authentication<br>
+Stateless Session Management<br>
+Persistent Score Tracking<br>
+RESTful API Architecture<br>
 Production Deployment
 
 # 🗄 Database Schema Overview
