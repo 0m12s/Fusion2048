@@ -18,7 +18,7 @@ C --> D[Controllers]
 D --> E[Services]
 E --> F[Repositories]
 
-F --> G[(PostgreSQL<br>Render Hosted)]
+F --> G[(PostgreSQL)]
 ```
 
 # 🔐 Authentication Flow (Manual JWT Implementation)
