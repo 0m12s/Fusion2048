@@ -8,16 +8,18 @@
 
 # 🏗 System Architecture
 
-Frontend (HTML/CSS/JS)
-        ↓ REST API (JSON)
-Spring Boot Backend
-  ├── Security Config
-  ├── JWT Filter (Custom OncePerRequestFilter)
-  ├── Controllers
-  ├── Services
-  ├── Repositories (JPA)
-        ↓
-PostgreSQL (Render)
+```mermaid
+flowchart TD
+
+A[Frontend<br>HTML CSS JS] -->|REST API| B[Spring Boot Backend]
+
+B --> C[Security Layer<br>JWT Filter]
+C --> D[Controllers]
+D --> E[Services]
+E --> F[Repositories]
+
+F --> G[(PostgreSQL<br>Render Hosted)]
+```
 
 # 🔐 Authentication Flow (Manual JWT Implementation)
 
@@ -30,27 +32,28 @@ PostgreSQL (Render)
 
 # 🚀 Tech Stack
 # Frontend
-HTML
+*HTML
 CSS
-JavaScript
+JavaScript*
+
 
 # Backend
-Java
+*Java
 Spring Boot
 Spring Security
 Custom JWT Filter
-JPA / Hibernate
+JPA / Hibernate*
 
 # Database
-PostgreSQL (Render)
+*PostgreSQL (Render)*
 
 # Deployment
-Frontend deployed on Vercel
-Backend & PostgreSQL deployed on Render
-Environment variables for secrets
+*Frontend deployed on Vercel*<br>
+*Backend & PostgreSQL deployed on Render*<br>
+*Environment variables for secrets*
 
-#📡 Core Features
-User Registration
+# 📡 Core Features 
+**User Registration**
 Encrypted Password Storage (BCrypt)
 Manual JWT Authentication
 Stateless Session Management
@@ -58,7 +61,7 @@ Persistent Score Tracking
 RESTful API Architecture
 Production Deployment
 
-#🗄 Database Schema Overview
+# 🗄 Database Schema Overview
 User
 id
 username (unique)
@@ -70,15 +73,17 @@ user_id (foreign key)
 score
 timestamp
 
+# ⚙️ Run Locally
+**Backend**
+mvn clean install
+mvn spring-boot:run
+
+**frontend**
+Open index.html
+
 # 📸 Application Screenshots
 <img width="1919" height="876" alt="Screenshot 2026-02-18 202958" src="https://github.com/user-attachments/assets/1ac727a8-9bce-4aed-9d99-bef528a57cc3" />
 <img width="1919" height="881" alt="Screenshot 2026-02-18 203209" src="https://github.com/user-attachments/assets/10e98fa4-2ca0-41ee-9dd4-6f784f838d65" />
 <img width="1919" height="884" alt="Screenshot 2026-02-18 203349" src="https://github.com/user-attachments/assets/343c49b1-e5ef-4dc1-8ce9-d9b3f50acc62" />
 
-# ⚙️ Run Locally
-Backend
-mvn clean install
-mvn spring-boot:run
 
-frontend
-Open index.html
